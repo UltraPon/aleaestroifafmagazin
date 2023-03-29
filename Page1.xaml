@@ -1,0 +1,70 @@
+﻿<Page x:Class="stroimagazin1111.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:stroimagazin1111"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1"
+      Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="back_button"
+  Style="{StaticResource MaterialDesignRaisedButton}"
+  ToolTip="Resource name: MaterialDesignRaisedButton"
+  Content="выйти"
+  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Grid.Column="7" Click="back_button_Click"/>
+
+        <ComboBox x:Name="table_spisok"
+            Grid.Column="2"
+            Grid.ColumnSpan="4"
+  materialDesign:HintAssist.Hint="Выберите таблицу"
+  materialDesign:HintAssist.HintOpacity=".26"
+  materialDesign:ComboBoxAssist.MaxLength="2"
+  IsEditable="False" FontSize="18" SelectionChanged="table_spisok_SelectionChanged" Margin="50,0,50,0">
+            <ComboBoxItem
+    Content="Роли" />
+            <ComboBoxItem
+    Content="Регистрация пользователей" />
+            <ComboBoxItem
+    Content="Пользователи" />
+            <ComboBoxItem
+    Content="Типы услуг" />
+            <ComboBoxItem
+    Content="Услуги" />
+            <ComboBoxItem
+    Content="Типы товаров" />
+            <ComboBoxItem
+    Content="Поставщики" />
+            <ComboBoxItem
+    Content="Товары" />
+            <ComboBoxItem
+    Content="Заказы" />
+            <ComboBoxItem
+    Content="Чеки" />
+        </ComboBox>
+        <Frame x:Name="PageFrame" Grid.ColumnSpan="8" Grid.Row="1" Grid.RowSpan="6"/>
+        <Frame x:Name="PageFrame2" Grid.ColumnSpan="8" Grid.RowSpan="7"/>
+    </Grid>
+</Page>
